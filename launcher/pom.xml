@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>project</artifactId>
+        <groupId>eu.monnetproject</groupId>
+        <version>1.13.1-SNAPSHOT</version>
+        <relativePath>..</relativePath>
+    </parent>
+    <artifactId>framework.launcher</artifactId>
+    <packaging>bundle</packaging>
+
+    <name>eu.monnetproject.framework.launcher OSGi Bundle</name>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Export-Package>eu.monnetproject.framework.launcher</Export-Package>
+                        <Private-Package>eu.monnetproject.framework.launcher.*</Private-Package>
+                        <Bundle-Activator>eu.monnetproject.framework.launcher.impl.Activator</Bundle-Activator>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+    	<dependency>
+    		<groupId>org.apache.felix</groupId>
+    		<artifactId>org.osgi.core</artifactId>
+    		<version>1.4.0</version>
+    	</dependency>
+    	<dependency>
+    		<groupId>org.apache.felix</groupId>
+    		<artifactId>org.osgi.compendium</artifactId>
+    		<version>1.4.0</version>
+    	</dependency>
+    	<dependency>
+    		<groupId>eu.monnetproject</groupId>
+    		<artifactId>framework.systemstate</artifactId>
+    		<version>${project.version}</version>
+    	</dependency>
+    </dependencies>
+</project>
