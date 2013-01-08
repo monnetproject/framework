@@ -9,8 +9,7 @@ import java.util.Map;
 import eu.monnetproject.framework.test.TestCase;
 import eu.monnetproject.framework.test.TestMonitor;
 import eu.monnetproject.framework.test.TestSuite;
-import eu.monnetproject.util.Logger;
-import eu.monnetproject.util.Logging;
+import java.util.logging.Logger;
 
 /**
  * Note: This code is copied from the Be Informed test framework (com.beinformed.product.platform.framework.testability).
@@ -30,7 +29,7 @@ public abstract class TestSuiteBase implements TestSuite {
 	private final transient Map<TestCase, Method> testCases = new HashMap<TestCase, Method>();
 	// TODO: Use a generic logging API instead of a custom interface.
 //	private static final Logger LOGGER = LoggerFactory.getLogger(TestSuiteBase.class);
-	private final Logger log = Logging.getLogger(this);
+	private final Logger log = Logger.getLogger(this.getClass().getName());
 
 	private final String label;
 

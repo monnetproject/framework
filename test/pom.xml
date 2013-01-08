@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>eu.monnetproject</groupId>
-        <artifactId>project</artifactId>
+        <artifactId>framework.project</artifactId>
         <version>1.13.1-SNAPSHOT</version>
         <relativePath>..</relativePath>
     </parent>
@@ -42,11 +42,6 @@
         <dependency>
             <groupId>eu.monnetproject</groupId>
             <artifactId>framework.systemstate</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>framework.util</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

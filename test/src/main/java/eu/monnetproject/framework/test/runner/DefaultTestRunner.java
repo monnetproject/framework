@@ -18,9 +18,8 @@ import eu.monnetproject.framework.test.TestMonitor;
 import eu.monnetproject.framework.test.TestRunner;
 import eu.monnetproject.framework.test.TestSuite;
 import eu.monnetproject.framework.test.base.NullTestMonitor;
-import eu.monnetproject.util.Logger;
-import eu.monnetproject.util.Logging;
 import java.util.*;
+import java.util.logging.Logger;
 
 /**
  * Default test runner implementation. <br />
@@ -35,7 +34,7 @@ import java.util.*;
  */
 public class DefaultTestRunner implements TestRunner {
 
-	private final Logger log = Logging.getLogger(this);
+	private final Logger log = Logger.getLogger(this.getClass().getName());
 	private final BundleContext context;
 
 	private final Map<ServiceReference, TestSuite> testSuites = new ConcurrentHashMap<ServiceReference, TestSuite>();

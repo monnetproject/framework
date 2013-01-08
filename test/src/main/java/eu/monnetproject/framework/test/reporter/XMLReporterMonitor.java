@@ -28,8 +28,6 @@ package eu.monnetproject.framework.test.reporter;
 
 import eu.monnetproject.framework.test.TestCase;
 import eu.monnetproject.framework.test.TestSuite;
-import eu.monnetproject.util.Logger;
-import eu.monnetproject.util.Logging;
 import java.util.LinkedList;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
@@ -43,7 +41,7 @@ import org.osgi.framework.FrameworkUtil;
  */
 public class XMLReporterMonitor implements BundleListener {
 
-    private final Logger log = Logging.getLogger(this);
+    private final java.util.logging.Logger log = java.util.logging.Logger.getLogger(this.getClass().getName());
     private final LinkedList<Bundle> monitoredBundles = new LinkedList<Bundle>();
     private final LinkedList<TestSuite> monitoredCases = new LinkedList<TestSuite>();
     private boolean hasStopped = false;

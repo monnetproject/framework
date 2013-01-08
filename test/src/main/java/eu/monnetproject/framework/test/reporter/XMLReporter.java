@@ -36,8 +36,7 @@ import java.util.Date;
 import eu.monnetproject.framework.test.TestCase;
 import eu.monnetproject.framework.test.TestMonitor;
 import eu.monnetproject.framework.test.TestSuite;
-import eu.monnetproject.util.Logger;
-import eu.monnetproject.util.Logging;
+import java.util.logging.Logger;
 
 /**
  *
@@ -47,7 +46,7 @@ public class XMLReporter implements TestMonitor {
 
     private final String TEST_DIR = "generated"+System.getProperty("file.separator")+"test-reports"+System.getProperty("file.separator");
     private final int POST_TEST_WAIT = 2000;
-    private final Logger log = Logging.getLogger(this);
+    private final Logger log = Logger.getLogger(this.getClass().getName());
     private XMLReporterMonitor monitor = new XMLReporterMonitor();
     private Report currentReport = null;
     private Date currentTestStart;
@@ -89,7 +88,8 @@ public class XMLReporter implements TestMonitor {
         if (thrwbl != null && thrwbl instanceof AssertionError) {
             return;
         }
-        log.stackTrace(thrwbl);
+        log.severe(string);
+//        log.stackTrace(thrwbl);
         if (currentResult != null) {
             return;
         } else {
@@ -127,7 +127,7 @@ public class XMLReporter implements TestMonitor {
             fileWriter.close();
         } catch (IOException ex) {
             log.severe("Could not write file");
-            log.stackTrace(ex);
+            //log.stackTrace(ex);
         }
         monitor.caseFinished(ts);
         new Thread(new Runnable() {
