@@ -49,7 +49,6 @@
     
     <modules>
         <module>launcher</module>    
-        <module>systemstate</module>
         <module>test</module>
         <module>config</module>
     </modules>

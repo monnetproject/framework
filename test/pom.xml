@@ -40,9 +40,19 @@
             <version>1.4.0</version>
         </dependency>
         <dependency>
-            <groupId>eu.monnetproject</groupId>
-            <artifactId>framework.systemstate</artifactId>
-            <version>${project.version}</version>
+        	<groupId>com.beinformed.framework.osgi</groupId>
+        	<artifactId>osgitest.api</artifactId>
+        	<version>1.0.0</version>
+        </dependency>
+        <dependency>
+        	<groupId>com.beinformed.framework.osgi</groupId>
+        	<artifactId>frameworkstate.api</artifactId>
+        	<version>1.0.0</version>
+        </dependency>
+        <dependency>
+        	<groupId>org.apache.felix</groupId>
+        	<artifactId>org.apache.felix.dependencymanager</artifactId>
+        	<version>3.1.0</version>
         </dependency>
     </dependencies>
 </project>

@@ -26,14 +26,15 @@
  ********************************************************************************/
 package eu.monnetproject.framework.test.reporter;
 
-import eu.monnetproject.framework.test.TestCase;
-import eu.monnetproject.framework.test.TestSuite;
 import java.util.LinkedList;
+
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.BundleEvent;
 import org.osgi.framework.BundleListener;
 import org.osgi.framework.FrameworkUtil;
+
+import com.beinformed.framework.osgi.osgitest.TestSuite;
 
 /**
  *

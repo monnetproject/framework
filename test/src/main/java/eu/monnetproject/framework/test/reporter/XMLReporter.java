@@ -32,11 +32,11 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.util.Date;
-
-import eu.monnetproject.framework.test.TestCase;
-import eu.monnetproject.framework.test.TestMonitor;
-import eu.monnetproject.framework.test.TestSuite;
 import java.util.logging.Logger;
+
+import com.beinformed.framework.osgi.osgitest.TestCase;
+import com.beinformed.framework.osgi.osgitest.TestMonitor;
+import com.beinformed.framework.osgi.osgitest.TestSuite;
 
 /**
  *
@@ -145,11 +145,6 @@ public class XMLReporter implements TestMonitor {
     }
 
     public void endTestRun() {
-    }
-
-    @Override
-    public void fail(String message) {
-        assertion(false,message);
     }
     
 }
