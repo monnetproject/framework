@@ -48,9 +48,8 @@
     </pluginRepositories>
     
     <modules>
-        <module>launcher</module>    
-        <module>test</module>
         <module>config</module>
+        <module>xmlreporter</module>
     </modules>
   
     <dependencies>
