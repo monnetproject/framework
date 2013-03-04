@@ -49,6 +49,7 @@
     
     <modules>
         <module>config</module>
+        <module>launcher</module>
         <module>xmlreporter</module>
     </modules>
   
