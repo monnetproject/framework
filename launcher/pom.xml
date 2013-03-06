@@ -4,7 +4,7 @@
     <parent>
         <artifactId>framework.project</artifactId>
         <groupId>eu.monnetproject</groupId>
-        <version>1.13.1-SNAPSHOT</version>
+        <version>1.13.3</version>
         <relativePath>..</relativePath>
     </parent>
     <artifactId>framework.launcher</artifactId>
@@ -40,9 +40,9 @@
     		<version>1.4.0</version>
     	</dependency>
     	<dependency>
-    		<groupId>eu.monnetproject</groupId>
-    		<artifactId>framework.systemstate</artifactId>
-    		<version>${project.version}</version>
+    		<groupId>com.beinformed.framework.osgi</groupId>
+    		<artifactId>frameworkstate.api</artifactId>
+    		<version>1.0.0</version>
     	</dependency>
     </dependencies>
 </project>

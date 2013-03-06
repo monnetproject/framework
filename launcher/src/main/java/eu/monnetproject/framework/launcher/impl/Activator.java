@@ -5,7 +5,7 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.BundleException;
 import org.osgi.util.tracker.ServiceTracker;
 
-import eu.monnetproject.framework.test.systemstate.SystemStateListener;
+import com.beinformed.framework.osgi.frameworkstate.FrameworkStateListener;
 import eu.monnetproject.framework.launcher.Command;
 
 public class Activator implements BundleActivator {
@@ -20,7 +20,7 @@ public class Activator implements BundleActivator {
 		final CommandRunner runner = new CommandRunner(context,exec);
 		new ServiceTracker(context, Command.class.getName(),runner).open();
 		
-		final SystemStateListener ssl = new SystemStateListener() {
+		final FrameworkStateListener ssl = new FrameworkStateListener() {
 			
 			@Override
 			public void onUnavailable() {
@@ -47,7 +47,7 @@ public class Activator implements BundleActivator {
 				}
 			}
 		};
-		context.registerService(SystemStateListener.class.getName(), ssl, null);
+		context.registerService(FrameworkStateListener.class.getName(), ssl, null);
 	}
 
 	@Override
