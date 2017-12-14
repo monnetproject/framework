@@ -39,10 +39,10 @@
     		<artifactId>org.osgi.compendium</artifactId>
     		<version>1.4.0</version>
     	</dependency>
-    	<dependency>
+        <!--<dependency>
     		<groupId>com.beinformed.framework.osgi</groupId>
     		<artifactId>frameworkstate.api</artifactId>
     		<version>1.0.0</version>
-    	</dependency>
+        </dependency>-->
     </dependencies>
 </project>

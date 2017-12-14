@@ -5,7 +5,7 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.BundleException;
 import org.osgi.util.tracker.ServiceTracker;
 
-import com.beinformed.framework.osgi.frameworkstate.FrameworkStateListener;
+//import com.beinformed.framework.osgi.frameworkstate.FrameworkStateListener;
 import eu.monnetproject.framework.launcher.Command;
 
 public class Activator implements BundleActivator {
@@ -20,34 +20,34 @@ public class Activator implements BundleActivator {
 		final CommandRunner runner = new CommandRunner(context,exec);
 		new ServiceTracker(context, Command.class.getName(),runner).open();
 		
-		final FrameworkStateListener ssl = new FrameworkStateListener() {
-			
-			@Override
-			public void onUnavailable() {
-				
-			}
-			
-			@Override
-			public void onStopping() {
-				
-			}
-			
-			@Override
-			public void onStarting() {
-				
-			}
-			
-			@Override
-			public void onAvailable() {
-				runner.exec(args);
-				try {
-					context.getBundles()[0].stop();
-				} catch(BundleException x) {
-					x.printStackTrace();
-				}
-			}
-		};
-		context.registerService(FrameworkStateListener.class.getName(), ssl, null);
+		//final FrameworkStateListener ssl = new FrameworkStateListener() {
+		//	
+		//	@Override
+		//	public void onUnavailable() {
+		//		
+		//	}
+		//	
+		//	@Override
+		//	public void onStopping() {
+		//		
+		//	}
+		//	
+		//	@Override
+		//	public void onStarting() {
+		//		
+		//	}
+		//	
+		//	@Override
+		//	public void onAvailable() {
+		//		runner.exec(args);
+		//		try {
+		//			context.getBundles()[0].stop();
+		//		} catch(BundleException x) {
+		//			x.printStackTrace();
+		//		}
+		//	}
+		//};
+		//context.registerService(FrameworkStateListener.class.getName(), ssl, null);
 	}
 
 	@Override
