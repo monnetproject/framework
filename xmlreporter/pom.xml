@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>eu.monnetproject</groupId>
+        <groupId>com.github.monnetproject</groupId>
         <artifactId>framework.project</artifactId>
         <version>1.13.3</version>
         <relativePath>..</relativePath>
@@ -11,7 +11,7 @@
     <artifactId>framework.xmlreporter</artifactId>
     <packaging>bundle</packaging>
 
-    <name>eu.monnetproject.framework.xmlreporter OSGi Bundle</name>
+    <name>com.github.monnetproject.framework.xmlreporter OSGi Bundle</name>
     <build>
         <plugins>
             <plugin>
@@ -20,8 +20,8 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Private-Package>eu.monnetproject.framework.test.xmlreporter</Private-Package>
-                        <Bundle-Activator>eu.monnetproject.framework.test.xmlreporter.Activator</Bundle-Activator>
+                        <Private-Package>com.github.monnetproject.framework.test.xmlreporter</Private-Package>
+                        <Bundle-Activator>com.github.monnetproject.framework.test.xmlreporter.Activator</Bundle-Activator>
                     </instructions>
                 </configuration>
             </plugin>

@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>framework.project</artifactId>
-        <groupId>eu.monnetproject</groupId>
+        <groupId>com.github.monnetproject</groupId>
         <version>1.13.3</version>
         <relativePath>..</relativePath>
     </parent>
@@ -11,5 +11,5 @@
     <artifactId>framework.config</artifactId>
     <packaging>bundle</packaging>
 
-    <name>eu.monnetproject.framework.config OSGi Bundle</name>
+    <name>com.github.monnetproject.framework.config OSGi Bundle</name>
 </project>
